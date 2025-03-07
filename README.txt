@@ -15,7 +15,7 @@ git commit -a -m "Message" (Message vervangen voor een commit bericht)
 - Branching
 Om een nieuwe branch te maken: git branch my-new-branch	(my-new-branch vervangen voor een goede naam)
 Om alle branches te zien: git branch
-Om naar een branch te gaan: git checkout my-new-branch (my-new-branch vervangen voor de branch name die je gebruikt)
+Om naar een branch te gaan: git checkout my-new-branch (my-new-branch vervangen voor de branch naam die je gebruikt)
 
 - Push
 Als je voor het eerst iets pusht: git push -u origin main
