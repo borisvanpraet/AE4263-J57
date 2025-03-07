@@ -18,7 +18,7 @@ Om naar een branch te gaan: git checkout my-new-branch (my-new-branch vervangen 
 
 - Push
 Als je voor het eerst iets pusht: git push -u origin main
-Daarna: git push origin main
+Daarna: git push origin my-branch (my-branch vervangen voor de branch waarnaar je pusht)
 Om een nieuwe branch te pushen: git push -u origin my-new-branch (my-new-branch vervangen voor de branch name die je gebruikt)
 
 - Pull
