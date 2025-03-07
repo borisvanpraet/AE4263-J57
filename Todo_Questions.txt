@@ -1,0 +1,8 @@
+To do:
+-
+- 
+-
+
+Questions:
+- P_L_iso_start in the cooledTurbine class is not compatible with Nstages = 1. This results in a division by 0 error.
+- Linear system is singular upon solving.
