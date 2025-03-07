@@ -1,5 +1,6 @@
 	Git Tutorial
 Alle Git taken moeten worden uitgevoerd vanuit de command line of de Git Bash/GUI.
+Nadat je de repository hebt gecloned, moet je altijd eerst git init gebruiken voordat je andere taken volbrengt.
 
 - Clone repository:
 git clone https://github.com/Floris89/AE4263-J57
