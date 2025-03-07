@@ -1027,11 +1027,7 @@ end BleedAirDistributor;
     Modelica.Units.SI.Pressure P_E_stage[Nstages]
       "Entering pressure of each stage";
     parameter Modelica.Units.SI.PerUnit PRnom=1.3;
-    parameter Modelica.Units.SI.Pressure P_L_iso_start[Nstages]=data.P_E_nom
-         ./ PRnom .^ linspace(
-          1,
-          Nstages,
-          Nstages);
+    parameter Modelica.Units.SI.Pressure P_L_iso_start[Nstages]=data.P_E_nom ./ PRnom .^ ones(Nstages); // linspace(1, Nstages, Nstages);
     Modelica.Units.SI.Pressure P_L_iso[Nstages](start=P_L_iso_start)
       "Equivalent leaving pressure of an isentropic expansion";
     Modelica.Units.SI.SpecificEnthalpy h_iso_stage[Nstages]
