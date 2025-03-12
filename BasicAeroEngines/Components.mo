@@ -1058,8 +1058,10 @@ end BleedAirDistributor;
     
   
     // cooling model
-    replaceable Components.TurbineCoolingModel.Gauntner StatorCooling[Nstages](CoolingTech = CoolingTechStat) constrainedby Components.TurbineCoolingModel.CoolingBaseModel(each Tblade = Tblade, T_ca = T_ca, T_E = T_E_stat) annotation (choicesAllMatching=true);
-    replaceable Components.TurbineCoolingModel.Gauntner RotorCooling[Nstages](CoolingTech = CoolingTechRot) constrainedby Components.TurbineCoolingModel.CoolingBaseModel(each Tblade = Tblade, T_ca = T_ca, T_E = T_E_rot) annotation (choicesAllMatching=true);
+    //replaceable Components.TurbineCoolingModel.Gauntner StatorCooling[Nstages](CoolingTech = CoolingTechStat) constrainedby Components.TurbineCoolingModel.CoolingBaseModel(each Tblade = Tblade, T_ca = T_ca, T_E = T_E_stat) annotation (choicesAllMatching=true);
+    //replaceable Components.TurbineCoolingModel.Gauntner RotorCooling[Nstages](CoolingTech = CoolingTechRot) constrainedby Components.TurbineCoolingModel.CoolingBaseModel(each Tblade = Tblade, T_ca = T_ca, T_E = T_E_rot) annotation (choicesAllMatching=true);
+    replaceable Components.TurbineCoolingModel.FixedCoolingFraction StatorCooling[Nstages](coolingFraction = Xi_cool_stat) constrainedby Components.TurbineCoolingModel.CoolingBaseModel(each Tblade = Tblade, T_ca = T_ca, T_E = T_E_stat) annotation (choicesAllMatching=true);
+    replaceable Components.TurbineCoolingModel.FixedCoolingFraction RotorCooling[Nstages](coolingFraction = Xi_cool_rot) constrainedby Components.TurbineCoolingModel.CoolingBaseModel(each Tblade = Tblade, T_ca = T_ca, T_E = T_E_rot) annotation (choicesAllMatching=true);
   
   equation
   //Cooling air properties and mass flow rate
