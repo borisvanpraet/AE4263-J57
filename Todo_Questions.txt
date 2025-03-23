@@ -6,3 +6,23 @@ To do:
 Questions:
 - P_L_iso_start in the cooledTurbine class is not compatible with Nstages = 1. This results in a division by 0 error.
 - Linear system is singular upon solving.
+
+Reference cycle:
+- T24: RC=401.5K vs OM=400.6K
+	- Reason unkown, our guesses: Isentropic eff wrong or measurement error on their side
+
+- P24 to P25 has a drop of 6.533 kPa, T and f are constant. This is the duct connecting LPC with HPC. It should be modelled to get accurate LPC exit temperature and HPC inlet pressure. If not, one will be off.
+
+- T3: RC=598.4 vs OM=597.4K. Repeat 1K off.
+
+- T4: RC=1199.0K vs OM=1178.9K. Off by a lil, could be due to not exactly knowing fuel composition.
+
+- T45: RC=967.53K vs OM=955.6K. Off due to 2% massflow difference and cooling model assumptions.
+
+- LPT entry T = 956.8K vs HPT exit T =955.6K. Weird?
+
+- T5: RC=831.49K vs OM=827.6K. Little off, manageable.
+
+- The last pressure drop in the nozzle is not included in the model.
+
+- FN: RC=46.85kN vs OM=47.534kN
